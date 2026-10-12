@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NutriBowl – Fresh, balanced meals delivered | Order healthy food online</title>
+<meta name="description" content="NutriBowl delivers fresh, balanced Indian meals with transparent nutrition. Order high-protein bowls, vegetarian meals and weekly meal plans.">
+<meta name="theme-color" content="#1f4d3a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🥗%3C/text%3E%3C/svg%3E">
+<style>
+:root{--g:#1f4d3a;--g2:#2f6b4f;--leaf:#7bb661;--cream:#f7f3e8;--card:#fffdf6;--ink:#1b2a22;--mut:#55655b;--sun:#f2b134;--line:#e3dcc8;--r:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--cream);padding-bottom:80px}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;margin:0}
+h1{font-size:clamp(2.1rem,7vw,3.6rem)}h2{font-size:clamp(1.6rem,4.5vw,2.3rem);margin-bottom:8px}h3{font-size:1.1rem}
+p{margin:0 0 .6em}a{color:var(--g2)}img{max-width:100%;display:block}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:99}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}section{padding:48px 0}.sub{color:var(--mut);max-width:60ch}
+.btn{min-height:44px;padding:10px 18px;border:0;border-radius:999px;background:var(--g);color:#fff;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.btn:hover{background:var(--g2)}.btn.sun{background:var(--sun);color:var(--ink)}.btn.out{background:transparent;color:var(--g);border:2px solid var(--g)}.btn.wide{width:100%}.btn[disabled]{opacity:.5;cursor:not-allowed}
+.lnk{background:none;border:0;color:var(--g2);text-decoration:underline;cursor:pointer;min-height:44px;padding:0 6px}
+header{position:sticky;top:0;z-index:20;background:var(--g);color:#fff}
+.hd{display:flex;align-items:center;gap:10px;height:60px}.logo{font:700 1.5rem Georgia,serif;color:#fff;text-decoration:none;margin-right:auto}.logo span{color:var(--sun)}
+.ib{min-height:44px;min-width:44px;border-radius:999px;border:1px solid #ffffff55;background:transparent;color:#fff;cursor:pointer;padding:0 14px}
+nav{background:var(--g2);overflow-x:auto;white-space:nowrap}nav .wrap{display:flex;gap:4px}nav a{color:#fff;text-decoration:none;padding:12px 12px;font-size:.95rem}nav a:hover{text-decoration:underline}
+.hero{background:linear-gradient(180deg,#e8efd9,var(--cream));padding:40px 0}.hg{display:grid;gap:28px;align-items:center}
+.hero p.lead{font-size:1.15rem;color:var(--mut);max-width:48ch;margin:14px 0 20px}.cta{display:flex;flex-wrap:wrap;gap:10px}
+.trust{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 0;padding:0;list-style:none}.trust li{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.88rem}
+.hero img{border-radius:28px;width:100%;box-shadow:0 12px 40px #1f4d3a33}
+.pin{display:flex;gap:8px;margin-top:20px;flex-wrap:wrap}.pin input{flex:1 1 150px}
+input,select{min-height:44px;padding:8px 12px;border:1.5px solid #b9b49c;border-radius:12px;background:#fff;width:100%}
+label{display:block;font-weight:600;margin:12px 0 4px}.err{color:#b3261e;font-size:.88rem;min-height:1.1em}.ok{color:#17653a;font-weight:600}.bad{color:#b3261e;font-weight:600}
+.tools{display:grid;gap:10px;margin:18px 0}.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}
+.chip{flex:none;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--g);background:transparent;cursor:pointer}.chip[aria-pressed=true]{background:var(--g);color:#fff}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.card .im{border:0;padding:0;background:none;cursor:pointer;display:block;width:100%}.card .im img{width:100%;aspect-ratio:5/4;object-fit:cover}
+.tag{position:absolute;top:10px;left:10px;background:var(--sun);font-size:.78rem;font-weight:700;padding:3px 10px;border-radius:999px}
+.heart{position:absolute;top:6px;right:6px;width:44px;height:44px;border-radius:50%;border:0;background:#ffffffdd;color:#9a9a9a;font-size:1.3rem;cursor:pointer}.heart.on{color:#d6336c}
+.cb{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}.cb p{color:var(--mut);font-size:.92rem;margin:0}.cb small{color:var(--mut)}
+.dot{display:inline-block;width:14px;height:14px;border:2px solid;border-radius:3px;position:relative;vertical-align:-1px}.dot:after{content:"";position:absolute;inset:2px;border-radius:50%;background:currentColor}.dot.v{color:#1a8a3c}.dot.n{color:#b3261e}
+.mac{display:flex;flex-wrap:wrap;gap:6px 12px;list-style:none;padding:0;margin:4px 0;font-size:.85rem;color:var(--mut)}.mac b{color:var(--ink)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;padding-top:8px}.row strong{font-size:1.2rem}
+.plans{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(290px,1fr))}.plan{background:var(--g);color:#fff;border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:8px}.plan.alt{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+.plan ul{padding-left:18px;margin:4px 0}.plan .pr{font:700 1.7rem Georgia,serif}.plan .btns{display:flex;gap:8px;margin-top:auto;padding-top:10px}.plan .btns .btn{flex:1}.plan:not(.alt) .btn.out{color:#fff;border-color:#fff}
+.why{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}.why div{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}.why span{font-size:1.6rem}
+.band{background:var(--g);color:#fff}.band .sub{color:#d6e5d9}
+.rv{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}.rv blockquote{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px}.st{color:#c98a00;letter-spacing:2px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:8px}summary{min-height:48px;padding:12px 16px;cursor:pointer;font-weight:600}details p{padding:0 16px 12px;color:var(--mut)}
+footer{background:#14352a;color:#cfe0d4;padding:36px 0}footer a{color:#fff}footer ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:4px 14px}footer .lnk{color:#fff}footer small{display:block;margin-top:12px;color:#9fb8a8}
+dialog{border:0;border-radius:20px;padding:0;background:var(--cream);color:var(--ink);width:min(720px,calc(100% - 16px));max-height:92vh}dialog::backdrop{background:#0008}
+#c{margin:0 0 0 auto;height:100%;max-height:100%;border-radius:20px 0 0 20px;width:min(430px,100%)}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;position:sticky;top:0;background:var(--cream);border-bottom:1px solid var(--line);z-index:2}.db{padding:16px}
+.pimg{width:100%;aspect-ratio:16/10;object-fit:cover}
+table{width:100%;border-collapse:collapse}td,th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}
+.ci{list-style:none;padding:0;margin:0}.ci li{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--line)}.ci img{width:64px;height:64px;border-radius:10px;object-fit:cover}.ci div{flex:1}.ci .r{flex:none;text-align:right}.ci span{display:block;color:var(--mut);font-size:.88rem}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--g);border-radius:999px;margin-top:4px}.qty button{width:44px;height:44px;border:0;background:none;font-size:1.3rem;cursor:pointer}.qty output{min-width:28px;text-align:center;font-weight:700}
+.tot div{display:flex;justify-content:space-between;padding:4px 0}.tot .f{font-weight:700;font-size:1.15rem;border-top:2px solid var(--ink);margin-top:6px;padding-top:8px}
+.note{background:#fff3cf;border-radius:10px;padding:10px 12px;font-size:.9rem;margin:10px 0}
+.steps{display:flex;gap:6px;margin-bottom:10px;font-size:.82rem}.steps span{flex:1;padding:6px;text-align:center;border-radius:8px;background:#e6e1cf}.steps .on{background:var(--g);color:#fff}
+.opt{display:flex;gap:10px;align-items:center;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:10px 12px;margin:6px 0;font-weight:500}.opt input{width:22px;min-height:22px}
+.g2{display:grid;gap:0 12px;grid-template-columns:1fr 1fr}.g2 .full{grid-column:1/-1}
+.tabs{display:flex;gap:6px;overflow-x:auto;margin-bottom:12px}
+.ord{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:10px}.badge{background:var(--sun);border-radius:999px;padding:2px 10px;font-size:.8rem;font-weight:700}
+#t{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;z-index:99;opacity:0;pointer-events:none;transition:opacity .2s}#t.on{opacity:1}
+#bar{position:fixed;left:0;right:0;bottom:0;z-index:15;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:var(--cream);border-top:1px solid var(--line);display:none}
+#bar.on{display:block}
+@media(min-width:760px){.hg{grid-template-columns:1.1fr .9fr}.tools{grid-template-columns:1fr 220px}#bar{display:none!important}body{padding-bottom:0}}
+@media(max-width:480px){.g2{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#t{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#menu">Skip to menu</a>
+<header>
+ <div class="wrap hd">
+  <a class="logo" href="#top" aria-label="NutriBowl home">Nutri<span>Bowl</span></a>
+  <button class="ib" data-a="acct" data-v="orders" aria-label="My account and orders">Account</button>
+  <button class="ib" data-a="cart" aria-label="Open cart">Cart <b id="cn">0</b></button>
+ </div>
+ <nav aria-label="Main"><div class="wrap"><a href="#menu">Menu</a><a href="#plans">Meal plans</a><a href="#why">Why NutriBowl</a><a href="#about">About</a><a href="#reviews">Reviews</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div></nav>
+</header>
+<main id="top">
+<section class="hero"><div class="wrap hg">
+ <div>
+  <h1>Eat Better. Feel Better. Live Better.</h1>
+  <p class="lead">Fresh, balanced meals made for your everyday health goals — delivered to your doorstep.</p>
+  <div class="cta"><a class="btn sun" href="#menu">Order Healthy Food</a><a class="btn out" href="#plans">Explore Meal Plans</a></div>
+  <form class="pin" id="pf" aria-label="Check delivery availability"><input id="pc" inputmode="numeric" maxlength="6" placeholder="Enter PIN code" aria-label="PIN code"><button class="btn" type="submit">Check Delivery Availability</button></form>
+  <p id="pr" role="status" style="margin-top:8px"></p>
+  <ul class="trust"><li>🌿 Fresh ingredients</li><li>📋 Nutrition information</li><li>💪 High-protein options</li><li>🧼 Hygienic preparation</li><li>🛵 Convenient delivery</li></ul>
+ </div>
+ <img id="hi" alt="Illustration of a NutriBowl grilled chicken millet bowl" width="560" height="448">
+</div></section>
+
+<section id="menu"><div class="wrap">
+ <h2>Our menu</h2><p class="sub">Tasty, home-style Indian flavours with the nutrition shown on every meal. Illustrations are placeholders — swap in your own food photos.</p>
+ <div class="tools"><input id="q" type="search" placeholder="Search meals, e.g. paneer, millet" aria-label="Search food">
+ <select id="so" aria-label="Sort meals"><option value="">Sort: Recommended</option><option value="pl">Price: low to high</option><option value="ph">Price: high to low</option><option value="cl">Calories: low to high</option><option value="pr">Protein: high to low</option></select></div>
+ <div class="chips" id="chips" role="group" aria-label="Categories"></div>
+ <div class="grid" id="grid" aria-live="polite"></div>
+</div></section>
+
+<section id="plans" class="band"><div class="wrap">
+ <h2>Choose a plan that fits your goal</h2><p class="sub">Meal plans built around how you like to eat. Calories and protein are approximate averages per meal. Plans are food choices, not medical advice.</p>
+ <div class="plans" id="pl" style="margin-top:20px"></div>
+</div></section>
+
+<section id="why"><div class="wrap"><h2>Why NutriBowl</h2><p class="sub">Convenient + Tasty + Transparent.</p>
+ <div class="why" style="margin-top:18px">
+  <div><span>🥦</span><h3>Fresh Ingredients</h3><p>Cooked in small batches with vegetables, grains and proteins we pick for flavour.</p></div>
+  <div><span>📊</span><h3>Transparent Nutrition</h3><p>Calories, protein, carbs, fat and allergens are shown for every meal.</p></div>
+  <div><span>💪</span><h3>Protein-Rich Choices</h3><p>Chicken, paneer, eggs, tofu and legumes in plenty of options.</p></div>
+  <div><span>🛵</span><h3>Convenient Delivery</h3><p>Pick a morning, afternoon or evening slot that suits your day.</p></div>
+  <div><span>🧼</span><h3>Hygienic Preparation</h3><p>Prepared in a clean kitchen and packed in sealed containers.</p></div>
+  <div><span>📅</span><h3>Flexible Meal Plans</h3><p>Office lunches to a full week of meals — pick what fits.</p></div>
+ </div></div></section>
+
+<section id="about" class="band"><div class="wrap"><h2>About NutriBowl</h2>
+ <p class="sub" style="font-size:1.2rem">We believe healthy food should be convenient, delicious and transparent.</p>
+ <p class="sub">NutriBowl exists for people who want to eat well but don't have time to plan and cook — students, busy professionals and anyone building better habits. We use fresh ingredients, show the nutrition for every meal, and offer balanced choices that taste like real food. No big claims: just good meals, clearly labelled.</p></div></section>
+
+<section id="reviews"><div class="wrap"><h2>What customers say</h2>
+ <p class="sub"><b>Demo content:</b> these are sample reviews for layout only. Replace with genuine customer reviews after launch.</p>
+ <div class="rv" id="rv" style="margin-top:18px"></div></div></section>
+
+<section id="faq" class="band"><div class="wrap" style="max-width:780px"><h2>Frequently asked questions</h2><div id="fq" style="margin-top:16px;color:var(--ink)"></div></div></section>
+</main>
+
+<footer id="contact"><div class="wrap">
+ <h3 style="color:#fff">NutriBowl</h3>
+ <p>Business address: [Add registered business address]<br>Support phone: [+91-XXXXXXXXXX]<br>Support email: [support@yourdomain.in]<br>FSSAI licence: [Add licence number when available]</p>
+ <ul><li><button class="lnk" data-a="pol" data-v="privacy">Privacy Policy</button></li><li><button class="lnk" data-a="pol" data-v="terms">Terms &amp; Conditions</button></li><li><button class="lnk" data-a="pol" data-v="refund">Refund/Cancellation Policy</button></li><li><button class="lnk" data-a="pol" data-v="delivery">Delivery Policy</button></li><li><button class="lnk" data-a="pol" data-v="contact">Contact Us</button></li><li><a href="#faq">FAQ</a></li></ul>
+ <small>© NutriBowl. Prototype: payments are test-only and nutrition values are approximate.</small>
+</div></footer>
+
+<div id="bar"><button class="btn sun wide" data-a="cart" id="barb">View cart</button></div>
+<div id="t" role="status" aria-live="polite"></div>
+<dialog id="m" aria-label="Details"></dialog>
+<dialog id="c" aria-label="Cart"></dialog>
+
+<script>
+/* ============ 1. DATA (replace with API/DB later: GET /api/products, /api/plans, /api/coupons, /api/delivery-areas) ============ */
+const PRODUCTS=[
+{id:1,n:'Grilled Chicken Millet Bowl',d:'Herb-grilled chicken on foxtail millet with steamed veggies.',p:249,cal:480,pro:38,carb:42,fat:14,v:0,m:'Lunch',al:[],tag:'Best Seller',ing:'Chicken breast, foxtail millet, broccoli, carrot, olive oil, herbs',g:350,c:['#e9c46a','#8ab17d','#f4a261','#e76f51']},
+{id:2,n:'Paneer Tikka Quinoa Bowl',d:'Smoky paneer tikka, quinoa, peppers and mint yogurt.',p:229,cal:460,pro:28,carb:44,fat:18,v:1,m:'Lunch',al:['Milk'],tag:'Popular',ing:'Paneer, quinoa, bell peppers, onion, curd, mint, spices',g:340,c:['#f1e3b3','#f4a261','#e76f51','#8ab17d']},
+{id:3,n:'Egg Bhurji Multigrain Wrap',d:'Masala egg bhurji rolled in a soft multigrain wrap.',p:149,cal:340,pro:22,carb:32,fat:13,v:0,m:'Breakfast',al:['Eggs','Gluten'],tag:'',ing:'Eggs, multigrain atta wrap, onion, tomato, green chilli, coriander',g:220,c:['#f6d365','#e9c46a','#e76f51','#8ab17d']},
+{id:4,n:'Moong Dal Chilla Plate',d:'Two protein-rich moong chillas with mint chutney.',p:119,cal:280,pro:16,carb:34,fat:8,v:1,m:'Breakfast',al:[],tag:'Popular',ing:'Moong dal, spinach, onion, ginger, mint chutney',g:240,c:['#d4e09b','#8ab17d','#f4a261','#fff3b0']},
+{id:5,n:'Vegan Chickpea Buddha Bowl',d:'Roasted chickpeas, sweet potato, greens and tahini dressing.',p:199,cal:390,pro:17,carb:52,fat:12,v:2,m:'Lunch',al:['Sesame'],tag:'',ing:'Chickpeas, sweet potato, kale, cucumber, tahini, lemon',g:330,c:['#e9c46a','#f4a261','#6a994e','#bc4749']},
+{id:6,n:'Oats & Berry Overnight Jar',d:'Rolled oats soaked in almond milk with seasonal fruit.',p:129,cal:310,pro:12,carb:44,fat:9,v:2,m:'Breakfast',al:['Gluten','Tree nuts'],tag:'',ing:'Rolled oats, almond milk, chia seeds, berries, banana',g:250,cold:1,c:['#f1e3d3','#9d4edd','#c9184a','#ffd6a5']},
+{id:7,n:'Roasted Makhana Mix',d:'Light, crunchy fox nuts with a peri-peri dusting.',p:89,cal:150,pro:5,carb:18,fat:6,v:2,m:'Snacks',al:[],tag:'',ing:'Makhana, olive oil, peri-peri spice mix, salt',g:40,cold:1,c:['#fff3b0','#f6d365','#e76f51','#fff']},
+{id:8,n:'Sprouts Chaat Cup',d:'Tangy sprouted moong with onion, tomato and lemon.',p:79,cal:160,pro:10,carb:24,fat:3,v:2,m:'Snacks',al:[],tag:'',ing:'Sprouted moong, onion, tomato, cucumber, lemon, chaat masala',g:180,cold:1,c:['#d4e09b','#bc4749','#6a994e','#f4a261']},
+{id:9,n:'Tandoori Chicken Salad',d:'Tandoori chicken over crunchy greens and lemon-mint dressing.',p:219,cal:330,pro:34,carb:14,fat:15,v:0,m:'Lunch',al:['Milk'],tag:'Popular',ing:'Chicken breast, curd marinade, lettuce, cucumber, carrot, lemon, mint',g:300,cold:1,c:['#bde0a3','#e76f51','#f4a261','#6a994e']},
+{id:10,n:'Tofu Stir-fry Brown Rice',d:'Garlicky tofu and vegetables over brown rice.',p:209,cal:420,pro:24,carb:48,fat:14,v:2,m:'Lunch',al:['Soy','Sesame'],tag:'',ing:'Tofu, brown rice, capsicum, carrot, beans, soy sauce, sesame oil',g:340,c:['#e0c9a6','#f1e3b3','#6a994e','#e76f51']},
+{id:11,n:'Greek Yogurt Fruit Parfait',d:'Thick yogurt layered with fruit and toasted seeds.',p:119,cal:220,pro:14,carb:28,fat:5,v:1,m:'Snacks',al:['Milk','Tree nuts'],tag:'',ing:'Greek yogurt, apple, pomegranate, honey, almonds',g:200,cold:1,c:['#fff','#c9184a','#ffb703','#f1e3d3']},
+{id:12,n:'Rajma Brown Rice Bowl',d:'Comforting home-style rajma with brown rice and kachumber.',p:169,cal:430,pro:18,carb:62,fat:10,v:1,m:'Lunch',al:[],tag:'Best Seller',ing:'Rajma, brown rice, tomato, onion, spices, cucumber salad',g:380,c:['#e0c9a6','#9b2226','#e76f51','#6a994e']}];
+const CATS={'High Protein':i=>i.pro>=25,Vegetarian:i=>i.v>0,Vegan:i=>i.v==2,Breakfast:i=>i.m=='Breakfast',Lunch:i=>i.m=='Lunch',Snacks:i=>i.m=='Snacks','Low Calorie':i=>i.cal<=350};
+const PLANS=[
+{id:'hp',n:'High Protein',meals:6,cal:480,pro:32,price:1299,inc:['6 protein-forward lunches','Chicken, paneer and tofu rotation','Nutrition card with every meal']},
+{id:'wm',n:'Weight Management',meals:6,cal:350,pro:22,price:1099,inc:['6 lighter, balanced meals','Veg-forward bowls and salads','Portion sizes clearly labelled']},
+{id:'be',n:'Balanced Everyday',meals:6,cal:430,pro:24,price:999,inc:['6 mixed meals','Grains, protein and veggies in each','Veg and non-veg mix']},
+{id:'vg',n:'Vegetarian',meals:6,cal:400,pro:20,price:949,inc:['6 vegetarian meals','Paneer, dal, rajma and millets','No eggs, no meat']},
+{id:'ol',n:'Office Lunch',meals:5,cal:460,pro:26,price:899,inc:['5 weekday lunches','Delivered before lunch hour','Spill-proof packaging']},
+{id:'w7',n:'7-Day Healthy Meal Plan',meals:14,cal:420,pro:25,price:2399,inc:['2 meals a day for 7 days','Breakfast + lunch variety','Best value per meal']}];
+const COUPONS={FIRSTORDER:{pct:20,max:100,min:199},HEALTHY10:{pct:10,max:80,min:149}};
+const MIN_ORDER=149,FREE_DELIVERY=399,FEE=40,COD_ENABLED=true;
+const PINS=['110001','110002','110003','122001','400001','400002','411001','560001','560002','500001','600001'];/* SAMPLE list, not live coverage */
+const SLOTS={Morning:'8–11 AM',Afternoon:'12–3 PM',Evening:'5–8 PM'};
+const STATUSES=['Order Placed','Confirmed','Preparing','Out for Delivery','Delivered','Cancelled'];
+const REVIEWS=[['Aarav S.',5,'Filling and actually tasty. Perfect for hostel days when the mess food gets boring.','Rajma Brown Rice Bowl'],['Neha K.',5,'My office lunch sorted. Love that the protein is printed on the box.','Paneer Tikka Quinoa Bowl'],['Rohan M.',4,'Good portion and flavour. Would like a spicier option.','Grilled Chicken Millet Bowl'],['Priya D.',5,'The sprouts chaat is my 4 pm saviour.','Sprouts Chaat Cup'],['Imran A.',4,'Easy ordering, on-time slot delivery.','Egg Bhurji Multigrain Wrap'],['Sneha R.',5,'Vegan options that are not boring. Buddha bowl is great.','Vegan Chickpea Buddha Bowl']];
+const FAQS=[['What areas do you deliver to?','Enter your PIN code in "Check Delivery Availability". We are expanding area by area.'],['How fresh is the food?','Meals are cooked in small batches and delivered in your chosen slot. See the pack label for consume-by guidance.'],['Can I customize my meal?','Small changes such as "less spicy" can be requested via support before the order is prepared. Full customisation is not available yet.'],['How do I cancel an order?','Open Account → Orders and tap Cancel while the order is Placed or Confirmed. See the Refund/Cancellation Policy.'],['What payment methods are accepted?','UPI, cards and Cash on Delivery (where enabled). In this prototype payments are simulated test payments.'],['Do you provide vegetarian meals?','Yes. Use the Vegetarian and Vegan filters, or choose the Vegetarian plan.'],['Do you have high-protein meals?','Yes. Filter by High Protein or sort by protein.'],['How are calories calculated?','Values are approximate and calculated from recipe quantities. Actual values can vary slightly.'],['Do you offer subscriptions?','Yes, see Meal Plans. Subscription billing will be enabled with our payment partner.'],['How should I store/reheat the food?','Refrigerate on arrival and eat within 24 hours. Reheat hot meals in a microwave for 2–3 minutes until steaming; chilled items are served cold.']];
+const POLICIES={privacy:['Privacy Policy','Placeholder: describe what data you collect (name, phone, email, address), why, how long you keep it and how customers can request deletion. Have a lawyer review before launch.'],terms:['Terms & Conditions','Placeholder: ordering terms, pricing, liability and dispute resolution. Have a lawyer review before launch.'],refund:['Refund/Cancellation Policy','Placeholder: orders can be cancelled before preparation starts. Describe refund timelines and conditions here.'],delivery:['Delivery Policy','Placeholder: delivery slots (Morning 8–11, Afternoon 12–3, Evening 5–8), fees (₹40, free above ₹399) and serviceable areas.'],contact:['Contact Us','Phone: [+91-XXXXXXXXXX]<br>Email: [support@yourdomain.in]<br>Address: [Add business address]<br>FSSAI: [Add licence details when available]']};
+/* ADMIN NOTE: add/edit food, prices, availability, orders, customers, coupons, areas, plans and sales belong in a separate, authenticated /admin app calling protected APIs. Intentionally not shipped in this public page. */
+
+/* ============ 2. HELPERS & STORE (swap Store/API internals for fetch() calls) ============ */
+const $=s=>document.querySelector(s),rs=n=>'₹'+Math.round(n).toLocaleString('en-IN');
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const Store={get(k,d){try{const v=JSON.parse(localStorage.getItem('nb_'+k));return v==null?d:v}catch(e){return d}},set(k,v){try{localStorage.setItem('nb_'+k,JSON.stringify(v))}catch(e){}}};
+const P=id=>PRODUCTS.find(p=>p.id==id);
+const API={
+ checkPin:async p=>PINS.includes(p),
+ orders:()=>Store.get('orders',[]),
+ saveOrders:l=>Store.set('orders',l),
+ createOrder:async o=>{const l=API.orders();l.unshift(o);API.saveOrders(l);return o},
+ /* Payment adapter: replace with Razorpay (create order server-side, open Checkout, verify signature server-side). */
+ pay:async o=>o.method==='COD'?{status:'Pending (pay on delivery)'}:{status:'Test payment (no money charged)'}
+};
+function img(i,big){const[c0,c1,c2,c3]=i.c,sv=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2efdc"/><stop offset="1" stop-color="#cfe3bd"/></linearGradient></defs><rect width="200" height="160" fill="url(#g)"/><ellipse cx="100" cy="132" rx="70" ry="9" fill="#0002"/><path d="M26 78h148a74 56 0 0 1-148 0z" fill="#fff" stroke="#1f4d3a" stroke-width="3"/><ellipse cx="100" cy="78" rx="74" ry="20" fill="${c0}"/><circle cx="70" cy="74" r="17" fill="${c1}"/><circle cx="104" cy="70" r="15" fill="${c2}"/><circle cx="134" cy="77" r="14" fill="${c3}"/><circle cx="92" cy="82" r="9" fill="${c2}"/><circle cx="118" cy="84" r="7" fill="${c1}"/><path d="M60 60q10-22 22-8M120 56q14-24 26-6" stroke="#fff" stroke-width="3" fill="none" opacity=".7"/></svg>`;return'data:image/svg+xml,'+encodeURIComponent(sv)}
+let tt;const toast=m=>{const t=$('#t');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),2200)};
+const show=(d,h)=>{d.innerHTML=h;if(!d.open)d.showModal()};
+const head=t=>`<div class="dh"><h2 style="margin:0;font-size:1.3rem">${t}</h2><button class="btn out" data-a="close" aria-label="Close">Close</button></div>`;
+const dot=v=>`<span class="dot ${v?'v':'n'}" role="img" aria-label="${v?'Vegetarian':'Non-vegetarian'}"></span>`;
+
+/* ============ 3. MENU ============ */
+const flt={q:'',cat:'All',sort:''};
+const saved=()=>Store.get('saved',[]);
+const card=i=>`<article class="card"><button class="im" data-a="open" data-v="${i.id}" aria-label="View details for ${i.n}"><img src="${img(i)}" alt="${i.n} – illustration" loading="lazy" width="400" height="320"></button>${i.tag?`<span class="tag">${i.tag}</span>`:''}<button class="heart ${saved().includes(i.id)?'on':''}" data-a="save" data-v="${i.id}" aria-pressed="${saved().includes(i.id)}" aria-label="Save ${i.n}">♥</button><div class="cb"><h3>${dot(i.v)} ${i.n}</h3><p>${i.d}</p><ul class="mac"><li><b>${i.cal}</b> kcal</li><li><b>${i.pro}g</b> protein</li><li><b>${i.carb}g</b> carbs</li><li><b>${i.fat}g</b> fat</li></ul><small>${i.al.length?'Contains: '+i.al.join(', '):'No major allergens listed'}</small><div class="row"><strong>${rs(i.p)}</strong><button class="btn" data-a="add" data-v="${i.id}">Add to Cart</button></div></div></article>`;
+function menu(){let l=PRODUCTS.filter(i=>(flt.cat==='All'||CATS[flt.cat](i))&&(i.n+' '+i.d+' '+i.ing).toLowerCase().includes(flt.q));
+ const s=flt.sort;if(s)l.sort((a,b)=>({pl:a.p-b.p,ph:b.p-a.p,cl:a.cal-b.cal,pr:b.pro-a.pro})[s]);
+ $('#grid').innerHTML=l.map(card).join('')||'<p>No meals match your search. Try another word or category.</p>';
+ $('#chips').innerHTML=['All',...Object.keys(CATS)].map(c=>`<button class="chip" data-a="cat" data-v="${c}" aria-pressed="${c===flt.cat}">${c}</button>`).join('')}
+function toggleSave(id){let s=saved();s=s.includes(id)?s.filter(x=>x!==id):[...s,id];Store.set('saved',s);menu()}
+
+/* ============ 4. PRODUCT DETAIL ============ */
+function openProduct(id){const i=P(id),r=[REVIEWS[id%6],REVIEWS[(id+2)%6]];
+ show($('#m'),`${head(esc(i.n))}<img class="pimg" src="${img(i)}" alt="${i.n} – illustration" width="640" height="400"><div class="db"><p>${dot(i.v)} ${i.v==2?'Vegan':i.v?'Vegetarian':'Non-vegetarian'} · ${i.m} · Portion ${i.g} g</p><p>${i.d}</p>
+ <h3>Nutrition facts (approximate, per serving)</h3><table><tr><th>Calories</th><td>${i.cal} kcal</td></tr><tr><th>Protein</th><td>${i.pro} g</td></tr><tr><th>Carbohydrates</th><td>${i.carb} g</td></tr><tr><th>Fat</th><td>${i.fat} g</td></tr></table>
+ <h3 style="margin-top:14px">Ingredients</h3><p>${i.ing}</p><h3>Allergens</h3><p>${i.al.length?i.al.join(', '):'No major allergens listed. Prepared in a shared kitchen.'}</p>
+ <h3>Preparation</h3><p>Cooked fresh in small batches on the day of delivery and packed in sealed containers.</p>
+ <h3>Storage &amp; reheating</h3><p>Refrigerate on arrival and eat within 24 hours. ${i.cold?'Serve chilled; do not reheat.':'Microwave 2–3 minutes until steaming hot, stirring halfway.'}</p>
+ <h3>Reviews (demo content)</h3>${r.map(x=>`<blockquote class="ord" style="margin:6px 0"><span class="st" aria-label="${x[1]} out of 5">${'★'.repeat(x[1])}</span> <b>${x[0]}</b><br>${x[2]}</blockquote>`).join('')}
+ <div class="row" style="margin-top:14px"><div class="qty"><button data-a="pq" data-v="-1" aria-label="Decrease quantity">−</button><output id="pq" aria-live="polite">1</output><button data-a="pq" data-v="1" aria-label="Increase quantity">+</button></div><button class="btn" data-a="addq" data-v="${i.id}">Add to Cart · ${rs(i.p)}</button></div></div>`)}
+
+/* ============ 5. CART & PRICING ============ */
+let cart=Store.get('cart',{}),coupon=Store.get('coupon','');
+Object.keys(cart).forEach(k=>{if(!P(k))delete cart[k]});if(!COUPONS[coupon])coupon='';
+const count=()=>Object.values(cart).reduce((a,b)=>a+b,0);
+function calc(){const items=Object.entries(cart).map(([id,q])=>({...P(id),q})),sub=items.reduce((s,i)=>s+i.p*i.q,0),c=COUPONS[coupon];let disc=0,cm='';
+ if(c){if(sub>=c.min)disc=Math.min(c.max,Math.round(sub*c.pct/100));else cm=`${coupon} needs a minimum order of ${rs(c.min)}.`}
+ const fee=sub&&sub-disc<FREE_DELIVERY?FEE:0;return{items,sub,disc,fee,total:sub-disc+fee,cm,low:sub<MIN_ORDER}}
+function saveCart(){Store.set('cart',cart);Store.set('coupon',coupon);const n=count(),k=calc();$('#cn').textContent=n;$('#bar').classList.toggle('on',n>0);$('#barb').textContent=`View cart · ${n} item${n>1?'s':''} · ${rs(k.total)}`;if($('#c').open)drawCart()}
+const add=(id,q=1)=>{cart[id]=Math.min(20,(cart[id]||0)+q);saveCart();toast('Added to cart')};
+const setQ=(id,q)=>{if(q<=0)delete cart[id];else cart[id]=Math.min(20,q);saveCart()};
+function drawCart(){const k=calc(),t=k.totals;
+ const body=k.items.length?`<ul class="ci">${k.items.map(i=>`<li><img src="${img(i)}" alt="" width="64" height="64"><div><b>${i.n}</b><span>${rs(i.p)} each</span><div class="qty"><button data-a="dec" data-v="${i.id}" aria-label="Decrease ${i.n}">−</button><output>${i.q}</output><button data-a="inc" data-v="${i.id}" aria-label="Increase ${i.n}">+</button></div></div><div class="r"><b>${rs(i.p*i.q)}</b><br><button class="lnk" data-a="rm" data-v="${i.id}" aria-label="Remove ${i.n}">Remove</button></div></li>`).join('')}</ul>
+ <label for="cc">Apply Coupon</label><div class="pin" style="margin:0"><input id="cc" placeholder="FIRSTORDER or HEALTHY10" value="${esc(coupon)}" autocapitalize="characters"><button class="btn out" data-a="coupon">Apply</button></div><div class="err" id="ce" role="alert">${k.cm}</div>
+ <div class="tot" style="margin-top:12px"><div><span>Subtotal</span><span>${rs(k.sub)}</span></div><div><span>Discount${coupon&&k.disc?' ('+coupon+')':''}</span><span>−${rs(k.disc)}</span></div><div><span>Delivery fee</span><span>${k.fee?rs(k.fee):'Free'}</span></div><div class="f"><span>Total</span><span>${rs(k.total)}</span></div></div>
+ ${k.low?`<div class="note">Minimum order is ${rs(MIN_ORDER)}. Add ${rs(MIN_ORDER-k.sub)} more to check out.</div>`:k.fee?`<div class="note">Add ${rs(FREE_DELIVERY-(k.sub-k.disc))} more for free delivery.</div>`:''}
+ <button class="btn wide" style="margin-top:8px" data-a="checkout" ${k.low?'disabled':''}>Proceed to Checkout</button>`:'<p>Your cart is empty. Pick a meal from the menu.</p>';
+ show($('#c'),`${head('Your cart')}<div class="db">${body}<button class="btn out wide" style="margin-top:10px" data-a="close">Continue Shopping</button></div>`)}
+function applyCoupon(){const v=$('#cc').value.trim().toUpperCase();if(!v){coupon='';saveCart();return}if(!COUPONS[v]){$('#ce').textContent='That coupon code is not valid.';return}coupon=v;saveCart()}
+
+/* ============ 6. CHECKOUT (4 steps) ============ */
+let ck={step:1,d:{}};
+const OK=(c,m)=>c?'':m,req=n=>v=>OK(v.trim(),n+' is required');
+const V={name:v=>OK(v.trim().length>1,'Enter your full name'),mobile:v=>OK(/^[6-9]\d{9}$/.test(v),'Enter a valid 10-digit mobile number'),email:v=>OK(/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v),'Enter a valid email address'),house:req('House/Flat'),street:req('Street'),area:req('Area'),city:req('City'),state:req('State'),pin:v=>OK(/^[1-9]\d{5}$/.test(v),'Enter a 6-digit PIN code'),upi:v=>OK(/^[\w.\-]{2,}@[a-zA-Z]{2,}$/.test(v),'Enter a valid UPI ID like name@bank')};
+const F={1:['name','mobile','email'],2:['house','street','area','city','state','pin']};
+const L={name:'Full name',mobile:'Mobile number',email:'Email',house:'House/Flat',street:'Street',area:'Area',city:'City',state:'State',pin:'PIN code'};
+const AT={mobile:'type="tel" inputmode="numeric" maxlength="10" autocomplete="tel-national"',email:'type="email" autocomplete="email"',pin:'inputmode="numeric" maxlength="6" autocomplete="postal-code"',name:'autocomplete="name"',house:'autocomplete="address-line1"',street:'autocomplete="address-line2"',city:'autocomplete="address-level2"',state:'autocomplete="address-level1"',area:''};
+const fld=n=>`<div class="${n==='house'||n==='street'||n==='name'||n==='email'?'full':''}"><label for="${n}">${L[n]}</label><input id="${n}" name="${n}" value="${esc(ck.d[n]||'')}" ${AT[n]||''} aria-describedby="e_${n}" required><div class="err" id="e_${n}" role="alert"></div></div>`;
+function startCheckout(){const k=calc();if(!k.items.length||k.low)return;$('#c').close();const u=Store.get('user',{}),a=Store.get('addr',[])[0]||{};ck={step:1,d:{name:u.name||'',mobile:u.mobile||'',email:u.email||'',...a,...ck.d}};drawCk()}
+function drawCk(){const s=ck.step,k=calc();let b='';
+ if(s<3)b=`<div class="g2">${F[s].map(fld).join('')}</div>`+(s==2?'<div id="pm" role="status"></div>':'');
+ if(s==3)b=`<h3>Choose a delivery slot</h3>${Object.entries(SLOTS).map(([n,t])=>`<label class="opt"><input type="radio" name="slot" value="${n}" ${ck.d.slot===n?'checked':''}> ${n} (${t})</label>`).join('')}<div class="err" id="e_slot" role="alert"></div>`;
+ if(s==4)b=`<h3>Order summary</h3><ul class="ci">${k.items.map(i=>`<li><div>${i.n} × ${i.q}</div><div class="r">${rs(i.p*i.q)}</div></li>`).join('')}</ul><div class="tot"><div><span>Subtotal</span><span>${rs(k.sub)}</span></div><div><span>Discount</span><span>−${rs(k.disc)}</span></div><div><span>Delivery</span><span>${k.fee?rs(k.fee):'Free'}</span></div><div class="f"><span>Total</span><span>${rs(k.total)}</span></div></div>
+ <p style="margin-top:10px"><b>Deliver to:</b> ${esc([ck.d.house,ck.d.street,ck.d.area,ck.d.city,ck.d.state,ck.d.pin].join(', '))}<br><b>Slot:</b> ${ck.d.slot} (${SLOTS[ck.d.slot]})</p>
+ <div class="note"><b>Demo mode:</b> no real payment is taken. A payment gateway (e.g. Razorpay) will be connected before launch. We never ask for card numbers on this site.</div><h3>Payment method</h3>
+ <label class="opt"><input type="radio" name="pay" value="UPI" ${ck.d.method==='UPI'?'checked':''}> UPI (test)</label><div id="upi" ${ck.d.method==='UPI'?'':'hidden'}><label for="upiid">UPI ID</label><input id="upiid" placeholder="name@bank" value="${esc(ck.d.upi||'')}"><div class="err" id="e_upi" role="alert"></div></div>
+ <label class="opt"><input type="radio" name="pay" value="Card" ${ck.d.method==='Card'?'checked':''}> Credit/Debit Card (test)</label><p id="cardn" ${ck.d.method==='Card'?'':'hidden'} style="font-size:.9rem;color:var(--mut)">Card details will be entered on the gateway's secure page in the live version.</p>
+ ${COD_ENABLED?`<label class="opt"><input type="radio" name="pay" value="COD" ${ck.d.method==='COD'?'checked':''}> Cash on Delivery</label>`:''}<div class="err" id="e_pay" role="alert"></div>`;
+ show($('#m'),`${head('Checkout')}<div class="db"><div class="steps" aria-label="Step ${s} of 4">${['Details','Address','Slot','Payment'].map((x,i)=>`<span class="${i+1===s?'on':''}">${i+1}. ${x}</span>`).join('')}</div>${b}<div class="row" style="margin-top:14px">${s>1?'<button class="btn out" data-a="back">Back</button>':'<span></span>'}<button class="btn" data-a="next">${s==4?'Place Order (demo payment)':'Continue'}</button></div></div>`)}
+async function ckNext(){const s=ck.step;let bad=0;
+ if(s<3){for(const n of F[s]){const v=$('#'+n).value.trim();ck.d[n]=v;const e=V[n](v);$('#e_'+n).textContent=e;if(e)bad=1}
+  if(!bad&&s==2&&!(await API.checkPin(ck.d.pin))){$('#e_pin').textContent="We're not delivering to this area yet.";bad=1}}
+ if(s==3){const r=document.querySelector('input[name=slot]:checked');if(!r){$('#e_slot').textContent='Choose a delivery slot';bad=1}else ck.d.slot=r.value}
+ if(bad)return;if(s<4){ck.step++;drawCk();return}
+ const r=document.querySelector('input[name=pay]:checked');if(!r){$('#e_pay').textContent='Choose a payment method';return}
+ ck.d.method=r.value;if(r.value==='UPI'){ck.d.upi=$('#upiid').value.trim();const e=V.upi(ck.d.upi);$('#e_upi').textContent=e;if(e)return}
+ const k=calc(),d=ck.d,o={id:'NB'+Date.now().toString(36).toUpperCase(),customer:{name:d.name,mobile:d.mobile,email:d.email},items:k.items.map(i=>({id:i.id,name:i.n,qty:i.q,price:i.p})),subtotal:k.sub,discount:k.disc,deliveryFee:k.fee,total:k.total,method:d.method,paymentStatus:'',status:'Order Placed',address:{house:d.house,street:d.street,area:d.area,city:d.city,state:d.state,pin:d.pin},slot:d.slot,createdAt:new Date().toISOString()};
+ o.paymentStatus=(await API.pay(o)).status;await API.createOrder(o);
+ const a=Store.get('addr',[]).filter(x=>x.pin!==d.pin||x.house!==d.house);Store.set('addr',[o.address,...a].slice(0,5));if(!Store.get('user'))Store.set('guest',o.customer);
+ cart={};coupon='';saveCart();ck.d={};confirmOrder(o)}
+function confirmOrder(o){const a=o.address;show($('#m'),`${head('Order Confirmed!')}<div class="db"><p class="ok">Thank you, ${esc(o.customer.name)}! Your order has been placed.</p><p><b>Order number:</b> ${o.id}</p><ul class="ci">${o.items.map(i=>`<li><div>${esc(i.name)} × ${i.qty}</div><div class="r">${rs(i.price*i.qty)}</div></li>`).join('')}</ul><p><b>${o.method==='COD'?'Amount to pay on delivery':'Amount'}:</b> ${rs(o.total)}<br><b>Payment:</b> ${o.paymentStatus}<br><b>Delivery address:</b> ${esc([a.house,a.street,a.area,a.city,a.state,a.pin].join(', '))}<br><b>Delivery slot:</b> ${o.slot} (${SLOTS[o.slot]})<br><b>Estimated delivery:</b> within your selected slot, next available day</p><div class="row"><button class="btn out" data-a="acct" data-v="orders">Track Order</button><button class="btn" data-a="close">Continue Shopping</button></div></div>`)}
+
+/* ============ 7. ACCOUNT (simulated locally; replace with real auth + /api/me/*) ============ */
+let tab='orders';
+function openAcct(t){tab=t||tab;const u=Store.get('user'),tabs=[['orders','My Orders'],['saved','Saved Meals'],['subs','Subscriptions'],['addr','Addresses'],['profile',u?'Profile':'Log in / Sign up']];let b='';
+ if(tab==='orders'){const l=API.orders();b=l.length?l.map(o=>`<div class="ord"><b>${o.id}</b> <span class="badge">${o.status}</span><br><small>${new Date(o.createdAt).toLocaleString('en-IN')} · ${rs(o.total)} · ${o.paymentStatus}</small><p>${o.items.map(i=>esc(i.name)+' ×'+i.qty).join(', ')}</p><small>Progress: ${STATUSES.slice(0,5).map(s=>STATUSES.indexOf(o.status)>=STATUSES.indexOf(s)&&o.status!=='Cancelled'?'<b>'+s+'</b>':s).join(' → ')}</small><div class="row"><button class="btn out" data-a="reorder" data-v="${o.id}">Reorder</button>${['Order Placed','Confirmed'].includes(o.status)?`<button class="btn out" data-a="cancel" data-v="${o.id}">Cancel order</button>`:''}</div></div>`).join(''):'<p>No orders yet. Your orders will appear here.</p>'}
+ if(tab==='saved'){const s=saved();b=s.length?s.map(id=>{const i=P(id);return`<div class="ord row"><span>${dot(i.v)} ${i.n} · ${rs(i.p)}</span><button class="btn" data-a="add" data-v="${i.id}">Add</button></div>`}).join(''):'<p>Tap ♥ on any meal to save it here.</p>'}
+ if(tab==='subs'){const s=Store.get('subs',[]);b=s.length?s.map(x=>`<div class="ord"><b>${esc(x.n)}</b><br><small>Started ${new Date(x.at).toLocaleDateString('en-IN')} · Demo subscription, not billed</small></div>`).join(''):'<p>No subscriptions yet. Choose one from Meal Plans.</p>'}
+ if(tab==='addr'){const a=Store.get('addr',[]);b=a.length?a.map(x=>`<div class="ord">${esc([x.house,x.street,x.area,x.city,x.state,x.pin].join(', '))}</div>`).join(''):'<p>Addresses you use at checkout are saved here on this device.</p>'}
+ if(tab==='profile')b=u?`<p>Signed in as <b>${esc(u.name)}</b> (${esc(u.mobile)})</p><button class="btn out" data-a="logout">Log out</button>`:`<p class="sub">Demo account stored on this device only. Live version will use OTP login.</p><label for="an">Name (for sign up)</label><input id="an" autocomplete="name"><label for="am">Mobile number</label><input id="am" type="tel" inputmode="numeric" maxlength="10"><div class="err" id="ae" role="alert"></div><div class="row"><button class="btn out" data-a="login">Log in</button><button class="btn" data-a="signup">Sign up</button></div>`;
+ show($('#m'),`${head('My account')}<div class="db"><div class="tabs" role="group" aria-label="Account sections">${tabs.map(x=>`<button class="chip" data-a="tab" data-v="${x[0]}" aria-pressed="${x[0]===tab}">${x[1]}</button>`).join('')}</div>${b}</div>`)}
+function auth(mode){const n=$('#an').value.trim(),m=$('#am').value.trim(),us=Store.get('users',[]);let e=V.mobile(m);if(!e&&mode==='signup'&&n.length<2)e='Enter your name to sign up';
+ if(!e&&mode==='login'&&!us.find(x=>x.mobile===m))e='No account for this number. Please sign up.';if(e){$('#ae').textContent=e;return}
+ let u=us.find(x=>x.mobile===m);if(!u){u={name:n,mobile:m};Store.set('users',[...us,u])}Store.set('user',u);toast('Welcome, '+u.name);openAcct('orders')}
+
+/* ============ 8. PLANS, REVIEWS, FAQ, POLICIES, DELIVERY ============ */
+const plan=p=>`<article class="plan ${PLANS.indexOf(p)%2?'alt':''}"><h3>${p.n}</h3><p>${p.meals} meals · ~${p.cal} kcal · ~${p.pro}g protein per meal</p><div class="pr">${rs(p.price)}</div><ul>${p.inc.map(x=>`<li>${x}</li>`).join('')}</ul><div class="btns"><button class="btn out" data-a="plan" data-v="${p.id}">View Plan</button><button class="btn sun" data-a="sub" data-v="${p.id}">Subscribe</button></div></article>`;
+const pl=id=>PLANS.find(p=>p.id===id);
+function pinCheck(v,el){el.className='';if(!/^[1-9]\d{5}$/.test(v)){el.textContent='Enter a valid 6-digit PIN code.';el.className='bad';return}API.checkPin(v).then(ok=>{el.textContent=ok?'Great! We deliver to your area.':"We're not delivering to this area yet.";el.className=ok?'ok':'bad'})}
+
+/* ============ 9. EVENTS ============ */
+const ACT={
+ open:t=>openProduct(+t.dataset.v),add:t=>add(+t.dataset.v),save:t=>toggleSave(+t.dataset.v),cat:t=>{flt.cat=t.dataset.v;menu()},
+ cart:()=>drawCart(),acct:t=>openAcct(t.dataset.v),close:t=>t.closest('dialog').close(),
+ inc:t=>setQ(t.dataset.v,cart[t.dataset.v]+1),dec:t=>setQ(t.dataset.v,cart[t.dataset.v]-1),rm:t=>setQ(t.dataset.v,0),coupon:applyCoupon,checkout:startCheckout,
+ pq:t=>{const o=$('#pq');o.textContent=Math.max(1,Math.min(20,+o.textContent+ +t.dataset.v))},addq:t=>{add(+t.dataset.v,+$('#pq').textContent);$('#m').close()},
+ next:ckNext,back:()=>{ck.step--;drawCk()},tab:t=>openAcct(t.dataset.v),login:()=>auth('login'),signup:()=>auth('signup'),logout:()=>{Store.set('user',null);openAcct('profile')},
+ plan:t=>{const p=pl(t.dataset.v);show($('#m'),`${head(p.n)}<div class="db"><p>${p.meals} meals · about ${p.cal} kcal and ${p.pro}g protein per meal (approximate)</p><h3>What's included</h3><ul>${p.inc.map(x=>`<li>${x}</li>`).join('')}</ul><p><b>${rs(p.price)}</b> total</p><p class="sub">Food plan only, not medical advice or a guaranteed outcome.</p><button class="btn wide" data-a="sub" data-v="${p.id}">Subscribe</button></div>`)},
+ sub:t=>{const p=pl(t.dataset.v);Store.set('subs',[{n:p.n,id:p.id,at:new Date().toISOString()},...Store.get('subs',[])]);toast('Subscription saved (demo, not billed)');if($('#m').open)openAcct('subs')},
+ pol:t=>{const p=POLICIES[t.dataset.v];show($('#m'),`${head(p[0])}<div class="db"><p>${p[1]}</p></div>`)},
+ reorder:t=>{const o=API.orders().find(x=>x.id===t.dataset.v);o.items.forEach(i=>P(i.id)&&add(i.id,i.qty));$('#m').close();drawCart()},
+ cancel:t=>{const l=API.orders();l.find(x=>x.id===t.dataset.v).status='Cancelled';API.saveOrders(l);toast('Order cancelled');openAcct('orders')}
+};
+document.addEventListener('click',e=>{const t=e.target.closest('[data-a]');if(t&&ACT[t.dataset.a])ACT[t.dataset.a](t)});
+document.addEventListener('change',e=>{if(e.target.name==='pay'){$('#upi').hidden=e.target.value!=='UPI';$('#cardn').hidden=e.target.value!=='Card'}});
+document.addEventListener('input',e=>{if(e.target.id==='pin'&&e.target.value.length===6)API.checkPin(e.target.value).then(ok=>{const m=$('#pm');if(m){m.textContent=ok?'Great! We deliver to your area.':"We're not delivering to this area yet.";m.className=ok?'ok':'bad'}})});
+$('#q').addEventListener('input',e=>{flt.q=e.target.value.trim().toLowerCase();menu()});
+$('#so').addEventListener('change',e=>{flt.sort=e.target.value;menu()});
+$('#pf').addEventListener('submit',e=>{e.preventDefault();pinCheck($('#pc').value.trim(),$('#pr'))});
+['m','c'].forEach(id=>$('#'+id).addEventListener('click',e=>{if(e.target.id===id)e.target.close()}));
+
+/* ============ 10. INIT ============ */
+$('#hi').src=img(PRODUCTS[0]);
+$('#pl').innerHTML=PLANS.map(plan).join('');
+$('#rv').innerHTML=REVIEWS.map(r=>`<blockquote><span class="st" aria-label="${r[1]} out of 5">${'★'.repeat(r[1])}</span><p>${r[2]}</p><small><b>${r[0]}</b> · ${r[3]}<br>(demo review)</small></blockquote>`).join('');
+$('#fq').innerHTML=FAQS.map(f=>`<details><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('');
+menu();saveCart();
+</script>
+</body>
+</html>
